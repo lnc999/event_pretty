@@ -62,7 +62,8 @@ $(function () {
                 console.log(res);
                 layer.msg('登录成功');
                 // 将登陆成功的字符串保存到localstorage中
-                localStorage.getItem('token', res.token);
+                localStorage.setItem('token', res.token);
+                console.log(res.token);
                 location.href = '/assets/index.html';
             },
         });
